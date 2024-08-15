@@ -2,78 +2,26 @@ import { useEffect, useState } from "react";
 import { chooseQuestion, getQuestions } from "./scripts";
 
 const questions = getQuestions();
-const defaultCredentials = [
-    {
-        username: "skydancer99",
-        password: "neverGonn@G1veYouUp",
-    },
-    {
-        username: "lunawolf",
-        password: "neverGonn@G1veYouUp",
-    },
-    {
-        username: "techguru2024",
-        password: "neverGonn@G1veYouUp",
-    },
-    {
-        username: "greenthumb",
-        password: "neverGonn@G1veYouUp",
-    },
-    {
-        username: "runner_joe",
-        password: "neverGonn@G1veYouUp",
-    },
-    {
-        username: "nightowl",
-        password: "neverGonn@G1veYouUp",
-    },
-    {
-        username: "pixeldust",
-        password: "neverGonn@G1veYouUp",
-    },
-    {
-        username: "mountainexplorer",
-        password: "neverGonn@G1veYouUp",
-    },
-    {
-        username: "coffeeaddict42",
-        password: "neverGonn@G1veYouUp",
-    },
-    {
-        username: "happycamper",
-        password: "neverGonn@G1veYouUp",
-    },
-];
 
 function UsernameAkinator({
     callback,
 }: UsernameAkinatorProps) {
-    const [usernames, setUsernames] = useState(
-        defaultCredentials.map((cred) => cred.username)
-    );
+    const [usernames, setUsernames] = useState([]);
     const [currQuestion, setCurrQuestion] = useState(
-        chooseQuestion(questions, usernames)
+        questions[0]
     );
 
     useEffect(() => {
         const credentials = JSON.parse(
-            window.localStorage.getItem("credentials") ||
-                "[]"
+            window.localStorage.getItem("credentials")!
         );
-        if (credentials.length) {
-            setUsernames(
-                credentials.map(
-                    (cred: { username: string }) =>
-                        cred.username
-                )
-            );
-            chooseQuestion(questions, usernames);
-        } else {
-            window.localStorage.setItem(
-                "credentials",
-                JSON.stringify(defaultCredentials)
-            );
-        }
+        setUsernames(
+            credentials.map(
+                (cred: { username: string }) =>
+                    cred.username
+            )
+        );
+        chooseQuestion(questions, usernames);
     }, []);
 
     function handleAnswer(answer: boolean) {

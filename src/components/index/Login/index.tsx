@@ -1,13 +1,70 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Password from "../../../components/shared/Password";
 import Submit from "../../shared/Submit";
 import Username from "../../shared/Username";
 import UsernameAkinator from "./UsernameAkinator";
 
+const defaultCredentials = [
+    {
+        username: "skydancer99",
+        password: "neverGonn@G1veYouUp",
+    },
+    {
+        username: "lunawolf",
+        password: "neverGonn@G1veYouUp",
+    },
+    {
+        username: "techguru2024",
+        password: "neverGonn@G1veYouUp",
+    },
+    {
+        username: "greenthumb",
+        password: "neverGonn@G1veYouUp",
+    },
+    {
+        username: "runner_joe",
+        password: "neverGonn@G1veYouUp",
+    },
+    {
+        username: "nightowl",
+        password: "neverGonn@G1veYouUp",
+    },
+    {
+        username: "pixeldust",
+        password: "neverGonn@G1veYouUp",
+    },
+    {
+        username: "mountainexplorer",
+        password: "neverGonn@G1veYouUp",
+    },
+    {
+        username: "coffeeaddict42",
+        password: "neverGonn@G1veYouUp",
+    },
+    {
+        username: "happycamper",
+        password: "neverGonn@G1veYouUp",
+    },
+];
+
 function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+
+    useEffect(() => {
+        const credentials = JSON.parse(
+            window.localStorage.getItem("credentials") ||
+                "[]"
+        );
+        if (!credentials.length) {
+            window.localStorage.setItem(
+                "credentials",
+                JSON.stringify(defaultCredentials)
+            );
+            window.location.reload();
+        }
+    }, []);
 
     function handlePasswordChange(
         e: React.ChangeEvent<HTMLInputElement>
