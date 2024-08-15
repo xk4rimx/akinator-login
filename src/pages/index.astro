@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import Login from "../components/index/Login";
+import UsernameGuesser from "../components/index/UsernameGuesser";
+import Footer from "../components/shared/Footer";
+import Header from "../components/shared/Header";
+import Password from "../components/shared/Password";
+---
+
+<Layout>
+    <Header isRegister={false} />
+    <UsernameGuesser client:load />
+    <Password />
+    <Login client:load />
+    <Footer isRegister={false} />
+</Layout>

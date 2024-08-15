@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import Footer from "../components/shared/Footer";
+import Header from "../components/shared/Header";
+import Password from "../components/shared/Password";
+import Regsiter from "../components/sign-up/Register";
+import Username from "../components/sign-up/Username";
+---
+
+<Layout>
+    <Header isRegister={true} />
+    <div
+        class="flex items-center justify-center flex-col gap-2"
+    >
+        <Username />
+        <Password />
+    </div>
+    <Regsiter />
+    <Footer isRegister={true} />
+</Layout>
