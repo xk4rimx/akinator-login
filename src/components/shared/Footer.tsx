@@ -1,5 +1,5 @@
 function Footer({ isRegister }: FooterProps) {
-    let text = "Don't have an account yet?";
+    let text = "Don't see your username above?";
     let href = "/sign-up";
     let anchorText = "Sign up now!";
 
