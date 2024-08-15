@@ -1,47 +1,43 @@
-# Astro Starter Kit: Minimal
+# Akinator Login
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Akinator Login takes a fun approach to user authentication by combining the concept of the Akinator guessing game with a login system. This project is all about making the login process more engaging by guessing the user's username through a series of targeted questions.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## Overview
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+The login system uses a binary search-like algorithm to quickly guess usernames, usually within just 5 questions. It’s a fresh spin on the traditional login process, keeping it both functional and intriguing.
 
-## 🚀 Project Structure
+## Key Features
 
-Inside of your Astro project, you'll see the following folders and files:
+-   Interactive username guessing mechanism.
+-   User registration.
+-   Modern, responsive UI.
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Technology Stack
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+-   [Astro](https://astro.build/) - Static site generator.
+-   [React](https://reactjs.org/) - UI component library.
+-   [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Getting Started
 
-Any static assets, like images, can be placed in the `public/` directory.
+To run this project locally:
 
-## 🧞 Commands
+1. Clone the repository: `git clone [your-repo-url]`.
+2. Install dependencies: `npm install`.
+3. Start the development server: `npm run dev`.
+4. Access the app at `http://localhost:4321`.
 
-All commands are run from the root of the project, from a terminal:
+## How It Works
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+1. Users create an account.
+2. During login, the system asks a series of yes/no questions.
+3. The algorithm eliminates non-matching usernames based on each answer.
+4. When only one username remains, the system asks for confirmation, then prompts the user for their password.
 
-## 👀 Want to learn more?
+## Project Context
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Akinator Login was built for the "Hackathon with Lewis" event, following the theme "Functionally Dysfunctional."
+
+## License
+
+This project is open-source and available under [The Unlicense](https://unlicense.org/), so feel free to use, modify, and distribute it.
