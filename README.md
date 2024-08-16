@@ -27,9 +27,11 @@ The login system uses a binary search-like algorithm to quickly guess usernames,
 To run this project locally:
 
 1. Clone the repository: `git clone https://github.com/xk4rimx/akinator-login`.
-2. Install dependencies: `npm install`.
-3. Start the development server: `npm run dev`.
-4. Access the app at `http://localhost:4321`.
+2. Navigate into the project's directory: `cd akinator-login`.
+3. Install dependencies: `npm install`.
+4. Start the development server: `npm run dev`.
+
+You will be able to access the app at `http://localhost:4321`.
 
 ## How It Works
 
