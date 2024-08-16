@@ -11,7 +11,7 @@ function Register() {
     function handleUsernameChange(
         e: React.ChangeEvent<HTMLInputElement>
     ) {
-        setUsername(e.target.value);
+        setUsername(e.target.value.toLowerCase());
     }
 
     function handlePasswordChange(
