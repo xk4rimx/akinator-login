@@ -1,4 +1,4 @@
-function Password({ onChange }: PasswordProps) {
+function Password({ onChange, onEnter }: PasswordProps) {
     return (
         <div className="flex items-center justify-center">
             <input
@@ -6,6 +6,11 @@ function Password({ onChange }: PasswordProps) {
                 type="password"
                 placeholder="Password"
                 onChange={onChange}
+                onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                        onEnter();
+                    }
+                }}
             />
         </div>
     );
@@ -15,6 +20,7 @@ interface PasswordProps {
     onChange: (
         e: React.ChangeEvent<HTMLInputElement>
     ) => void;
+    onEnter: () => void;
 }
 
 export default Password;

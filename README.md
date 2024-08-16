@@ -4,7 +4,7 @@ Akinator Login takes a fun approach to user authentication by combining the conc
 
 ## Overview
 
-The login system uses a binary search-like algorithm to quickly guess usernames, usually within just 5 questions. It’s a fresh spin on the traditional login process, keeping it both functional and intriguing.
+The login system uses a binary search-like algorithm to quickly guess usernames, usually within just 5 questions. It's a fresh spin on the traditional login process, keeping it both functional and intriguing.
 
 ## Key Features
 

@@ -65,14 +65,19 @@ function Register() {
                 { username, password },
             ])
         );
-        alert("Account created successfully!");
+        alert(
+            "Account created successfully! You can create more accounts or go back to the login page."
+        );
     }
 
     return (
         <>
             <div className="flex items-center justify-center flex-col gap-2">
                 <Username onChange={handleUsernameChange} />
-                <Password onChange={handlePasswordChange} />
+                <Password
+                    onChange={handlePasswordChange}
+                    onEnter={handleSubmit}
+                />
             </div>
             <Submit
                 text="Register"

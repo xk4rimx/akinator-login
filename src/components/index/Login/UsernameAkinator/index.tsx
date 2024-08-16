@@ -15,13 +15,13 @@ function UsernameAkinator({
         const credentials = JSON.parse(
             window.localStorage.getItem("credentials")!
         );
-        setUsernames(
-            credentials.map(
-                (cred: { username: string }) =>
-                    cred.username
-            )
+        const usernames = credentials.map(
+            (cred: { username: string }) => cred.username
         );
-        chooseQuestion(questions, usernames);
+        setUsernames(usernames);
+        setCurrQuestion(
+            chooseQuestion(questions, usernames)
+        );
     }, []);
 
     function handleAnswer(answer: boolean) {
@@ -53,9 +53,9 @@ function UsernameAkinator({
     }
 
     return (
-        <div className="flex items-center justify-center my-6">
-            <div className="max-w-md py-6 border-solid border-2 border-black p-6 rounded-lg text-center">
-                <p className="text-justify">
+        <div className="flex items-center justify-center m-6">
+            <div className="max-w-md py-6 border-solid border-2 border-black p-6 rounded-lg">
+                <p className="text-center">
                     {usernames.length === 1
                         ? `Is your username ${usernames[0]}?`
                         : currQuestion.text}
@@ -74,9 +74,11 @@ function UsernameAkinator({
                         No
                     </button>
                 </div>
-                <p className="font-mono text-xs">
-                    Remaining usernames:{" "}
-                    {usernames.join(", ")}
+                <p className="font-mono text-xs text-left">
+                    <span className="underline">
+                        Remaining usernames
+                    </span>
+                    : {usernames.join(", ")}
                 </p>
             </div>
         </div>

@@ -8,8 +8,9 @@ function Footer({ isRegister }: FooterProps) {
         href = "/";
         anchorText = "Login now!";
     }
+
     return (
-        <footer className="text-center my-6">
+        <footer className="text-center m-6">
             <span>
                 {text}{" "}
                 <a

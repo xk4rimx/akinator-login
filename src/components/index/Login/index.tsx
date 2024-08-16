@@ -122,7 +122,7 @@ function Login() {
             return;
         }
 
-        alert("Login successful!");
+        alert("Yay! Login successful!");
         window.location.href =
             "https://www.youtube.com/watch?v=xHEgHjJvR94";
     }
@@ -135,6 +135,7 @@ function Login() {
                         <Username value={username} />
                         <Password
                             onChange={handlePasswordChange}
+                            onEnter={handleSubmit}
                         />
                     </div>
                     <Submit
