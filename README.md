@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/284eef19-27be-4781-b01a-460f514f270c" width="650" />
+</p>
+
 # Akinator Login
 
 Akinator Login takes a fun approach to user authentication by combining the concept of the Akinator guessing game with a login system. This project is all about making the login process more engaging by guessing the user's username through a series of targeted questions.
