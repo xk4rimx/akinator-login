@@ -1,3 +1,5 @@
+
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/284eef19-27be-4781-b01a-460f514f270c" width="650" />
 </p>
@@ -26,7 +28,7 @@ The login system uses a binary search-like algorithm to quickly guess usernames,
 
 To run this project locally:
 
-1. Clone the repository: `git clone https://github.com/xk4rimx/akinator-login`.
+1. Clone the repository: `git clone https://github.com/xk4rim/akinator-login`.
 2. Navigate into the project's directory: `cd akinator-login`.
 3. Install dependencies: `npm install`.
 4. Start the development server: `npm run dev`.
